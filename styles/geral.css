@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #ffffff;
+}
+
+.main {
+  background-image: url("http://cdn.overmediacast.com/assets/imagem-de-fundp.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding: 90px 40px 0;
+}
+
+.title {
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.content {
+  padding-top: 30px;
+}
+
+.item-container {
+  border: 3px solid rgb(73, 224, 238);
+  background-color: #35d3e0;
+  padding: 30px 25px;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+
+  transition: background-color 500ms;
+}
+
+.item-container:hover {
+  background-color: #1dbfce;
+}
+
+.item-container .icon {
+  margin-right: 25px;
+}
+
+.item-1 {
+  animation: fade-in-up 400ms both, pulse 6s infinite 250ms;
+}
+
+.item-2 {
+  animation: fade-in-up 400ms both 250ms, pulse 6s infinite 500ms;
+}
+
+.item-3 {
+  animation: fade-in-up 400ms both 500ms, pulse 6s infinite 750ms;
+}
+
+.item-4 {
+  animation: fade-in-up 400ms both 750ms, pulse 6s infinite 1s;
+}
+
+.dialog-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000038;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #030303;
+}
+
+.dialog-opened {
+  display: flex;
+}
+
+.dialog-container .dialog-content {
+  width: 300px;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.dialog-container .dialog-title {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.dialog-container .dialog-description {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+/* Fade In */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+/* Fade In Up */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Pulse */
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  60% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
